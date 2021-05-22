@@ -14,7 +14,7 @@ module.exports = {
             options: {
               importLoaders: 2,
               sourceMap: false,
-              modules: true,
+              modules: false,
             },
           },
 
@@ -26,8 +26,8 @@ module.exports = {
   plugins: [
     // Extracts CSS into separate files
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
-      chunkFilename: "[id].css",
+      filename: "styles/[name].css",
+      chunkFilename: "[name].css",
     }),
   ],
 };

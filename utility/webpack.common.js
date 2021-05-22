@@ -24,9 +24,7 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    extensions: ["*", ".js", ".scss"],
-  },
+
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({

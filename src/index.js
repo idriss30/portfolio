@@ -1,1 +1,1 @@
-console.log("working on portfolio");
+import "./index.scss";
