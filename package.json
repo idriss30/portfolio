@@ -15,7 +15,9 @@
     "@babel/preset-env": "^7.14.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "core-js": "^3.13.1",
     "css-loader": "^5.2.5",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
     "node-sass": "^6.0.0",
@@ -25,5 +27,12 @@
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@lottiefiles/lottie-player": "^1.0.4",
+    "animate.css": "^4.1.1",
+    "baffle": "^0.3.6",
+    "swiper": "^6.6.2"
   }
 }
