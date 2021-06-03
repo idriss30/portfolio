@@ -25,6 +25,10 @@
   animation-name: fadeIn;
   animation-duration: 2s;
 
+  @media only screen and(max-width:420px) {
+    padding: 6rem 0;
+  }
+
   @media only screen and(max-width:320px) {
     font-size: 0.8rem;
   }
@@ -52,6 +56,7 @@
     margin: 0 auto;
     border: 1px solid #e20d3f;
     border-radius: 5%;
+    background-color: #222831;
 
     @media only screen and(max-width:520px) {
       width: 140px;
@@ -59,7 +64,7 @@
     }
 
     lottie-player {
-      margin-top: 0.8rem;
+      margin-top: 1.5rem;
     }
   }
 

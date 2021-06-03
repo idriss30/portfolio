@@ -1,9 +1,26 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  entry: path.resolve(__dirname, "..", "./src/index.js"),
+  entry: {
+    index: {
+      import: path.resolve(__dirname, "..", "./src/index.js"),
+    },
+
+    about: {
+      import: path.resolve(__dirname, "..", "./src/about.js"),
+    },
+    project: {
+      import: path.resolve(__dirname, "..", "./src/project.js"),
+    },
+    contact: {
+      import: path.resolve(__dirname, "..", "./src/contact.js"),
+    },
+  },
+
   module: {
     rules: [
       // babel loader to compile
@@ -24,9 +41,12 @@ module.exports = {
       },
     ],
   },
-
+  optimization: {
+    splitChunks: { chunks: "all" },
+  },
   plugins: [
     new CleanWebpackPlugin(),
+    new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       title: "Idriss Portfolio",
       template: path.resolve(__dirname, "..", "./src/index.html"),
@@ -50,7 +70,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, "..", "./dist"),
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
   },
   devServer: {
     contentBase: path.resolve(__dirname, "..", "./dist"),
