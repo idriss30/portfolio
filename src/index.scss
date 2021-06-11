@@ -9,8 +9,7 @@ html {
 }
 body {
   background-color: #1a1423;
-
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @keyframes fadeIn {
@@ -45,6 +44,8 @@ header {
   text-decoration: none;
   color: #e20d3f;
   font-weight: bold;
+  animation-name: swing;
+  animation-duration: 2s;
 
   @media only screen and (max-width: 320px) {
     position: absolute;
@@ -123,7 +124,8 @@ header {
   animation-name: fadeIn;
   animation-duration: 1s;
 
-  h2 {
+  h2,
+  h3 {
     @media only screen and(max-width:420px) {
       width: 90%;
     }
@@ -134,36 +136,41 @@ header {
   min-height: 60vh;
   padding-bottom: 10rem;
   position: relative;
+  margin-left: 2rem;
 }
 
 .section__one h1,
-h2 {
+h2,
+h3 {
   color: white;
 
-  font-size: 3rem;
-  margin-left: 2rem;
-  line-height: 3.5rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
   letter-spacing: 1.4rem;
 }
 
 .section__one h1 {
   white-space: nowrap;
+  text-shadow: 0px 3px 1px #e20d3f;
+  @media only screen and(max-width:420px) {
+    text-shadow: 0px 1.5px 1px #e20d3f;
+  }
 }
 .section__one h2 {
-  font-size: 2rem;
-  width: 70%;
-  text-shadow: 8px -8px 9px rgba(226, 13, 63, 0.5);
-}
-.section__one span {
-  color: #c4a79b;
+  font-size: 3rem;
 
-  font-weight: bold;
+  text-shadow: 0px 3px 1px #3e6680;
+}
+.section__one h3 {
+  font-size: 2.5rem;
+
+  text-shadow: 0px 3px 1px #3e6680;
 }
 
 .section__one-button {
   text-decoration: none;
   display: inline-block;
-  margin: 2rem 1rem 2rem 2rem;
+  margin: 2rem 1rem 2rem 0;
   background-color: #e20d3f;
   color: white;
   width: 14rem;
@@ -211,7 +218,7 @@ h2 {
 }
 
 /*media queries */
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 740px) {
   .section__one {
     margin-top: 8rem;
   }
@@ -222,14 +229,18 @@ h2 {
     line-height: 3rem;
   }
   .section__one h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
+  }
+
+  .section__one h3 {
+    font-size: 1.8rem;
   }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 640px) {
   .section__one h1,
-  h2 {
-    margin-left: 2rem;
+  h2,
+  h3 {
     line-height: 3rem;
     letter-spacing: 1rem;
   }
@@ -240,7 +251,7 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 540px) {
   /*header */
   header {
     font-size: 0.9rem;
@@ -269,6 +280,10 @@ h2 {
     font-size: 1.2rem;
   }
 
+  .section__one h3 {
+    font-size: 1rem;
+  }
+
   .section__one-button {
     width: 10rem;
   }
@@ -282,9 +297,11 @@ h2 {
 
 @media only screen and (max-width: 420px) {
   .section__one h1,
-  h2 {
+  h2,
+  h3 {
     letter-spacing: 0.4rem;
   }
+
   .header__logo {
     padding-top: 1rem;
   }
@@ -321,6 +338,7 @@ h2 {
   .section__one h2 {
     font-size: 1rem;
   }
+
   .project {
     display: none;
   }

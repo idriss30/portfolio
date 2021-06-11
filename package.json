@@ -18,6 +18,8 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "core-js": "^3.13.1",
     "css-loader": "^5.2.5",
+    "favicons": "^6.2.2",
+    "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.0",
@@ -32,6 +34,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "axios": "^0.21.1",
     "baffle": "^0.3.6"
   }
 }

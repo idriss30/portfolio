@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+
     <meta name="description" content="Idriss Cissoko web developer Portfolio" />
     <meta name="description" content="Full-stack javascript developer" />
   </head>
@@ -14,9 +15,9 @@
       <div class="header__container">
         <div class="header__top"></div>
         <ul class="header__top-list">
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/project.html">Work</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/project">Work</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
         <a href="/" class="header__logo">{IC}</a>
       </div>
@@ -29,7 +30,7 @@
         <h1>Projects</h1>
         <div class="project__section__container-group">
           <span class="project__number">1</span>
-          <span>Culinaree</span>
+          <span class="project__number">Culinaree</span>
           <div class="project__group-img culinaree"></div>
           <div class="project__group-text">
             <div class="text__description">
@@ -46,12 +47,13 @@
                 emergencies!
               </p>
               <p>
-                NB: Spoonacular api, limits the daily requests for free users.
+                <span class="nota_bene">NB</span>: Spoonacular api, limits the
+                daily requests for free users.
               </p>
             </div>
             <div class="text__stack">
               <span>Technology Stack</span>
-              <ul>
+              <ul class="list">
                 <li>Html</li>
                 <li>Css</li>
                 <li>Javacript</li>
@@ -59,7 +61,7 @@
             </div>
             <div class="text__methods">
               <span>Project Purpose</span>
-              <ul>
+              <ul class="list">
                 <li>Dom manipulation</li>
                 <li>Fetching data from a third party api</li>
                 <li>Learn about css flexbox and flex grid</li>
@@ -69,9 +71,11 @@
               href="https://idriss30.github.io/culinaree/"
               target="_blank"
               rel="noopener noreferrer"
+              class="visit__link"
               >See live</a
             >
             <a
+              class="visit__link"
               href="https://github.com/idriss30/culinaree"
               target="_blank"
               rel="noopener noreferrer"
@@ -81,7 +85,7 @@
         </div>
         <div class="project__section__container-group">
           <span class="project__number">2</span>
-          <span>LandC@re</span>
+          <span class="project__number">LandC@re</span>
           <div class="project__group-img landcare"></div>
           <div class="project__group-text">
             <div class="text__description">
@@ -93,7 +97,10 @@
                 The user can see what services the company has to offer and send
                 a message via a form.
               </p>
-              <p>The Admin can log in to see messages and delete them.</p>
+              <p>
+                The Admin can log in using the link from the footer section, to
+                see messages and delete them.
+              </p>
               <p>
                 Without using capital letters, please use the following
                 credentials;
@@ -104,7 +111,7 @@
             </div>
             <div class="text__stack">
               <span>Technology Stack</span>
-              <ul>
+              <ul class="list">
                 <li>jsx</li>
                 <li>scss</li>
                 <li>React</li>
@@ -119,7 +126,7 @@
             </div>
             <div class="text__methods">
               <span>Project purpose </span>
-              <ul>
+              <ul class="list">
                 <li>Understanding class based Components</li>
                 <li>Learn how to make routes with react router</li>
                 <li>Passing Props</li>
@@ -133,18 +140,21 @@
               </ul>
             </div>
             <a
+              class="visit__link"
               href="https://landcare.herokuapp.com/"
               target="_blank"
               rel="noopener noreferrer"
               >See live</a
             >
             <a
+              class="visit__link"
               href="https://github.com/idriss30/landcarev2-front"
               target="_blank"
               rel="noopener noreferrer"
               >front end Code</a
             >
             <a
+              class="visit__link"
               href="https://github.com/idriss30/landcarev2-front"
               target="_blank"
               rel="noopener noreferrer"
@@ -154,7 +164,7 @@
         </div>
         <div class="project__section__container-group">
           <span class="project__number">3</span>
-          <span>Dozo</span>
+          <span class="project__number">Dozo</span>
           <div class="project__group-img dozo"></div>
           <div class="project__group-text">
             <div class="text__description">
@@ -177,15 +187,15 @@
                 Demo credit card from stripe;
                 <span class="group__text-give">'4242 4242 4242 4242'</span>
               </p>
-              <p>Any other details should work just fine.</p>
+              <p>Any other details (zip code etc...) should work just fine.</p>
               <p>
-                NB: Site may take a few seconde to spin, the dynos goes to
-                sleep.
+                <span class="nota_bene">NB</span>: Site may take a few secondes
+                to spin, because the dynos goes to sleep.
               </p>
             </div>
             <div class="text__stack">
-              <span>Technology Stack</span>
-              <ul>
+              <span class="project__info">Technology Stack</span>
+              <ul class="list">
                 <li>Scss</li>
                 <li>React</li>
                 <li>React Router</li>
@@ -203,7 +213,7 @@
             </div>
             <div class="text__methods">
               <span>Project purpose </span>
-              <ul>
+              <ul class="list">
                 <li>Use functional components and hooks</li>
                 <li>
                   Global state management with useContext() and useReducer()
@@ -220,18 +230,20 @@
                 </li>
                 <li>
                   Familiarize myself with sequelize o.r.m by implementing
-                  differents models and create associations
+                  various models and create associations
                 </li>
                 <li>Create endpoints and secured some</li>
                 <li>Implementing a payment system (Stripe)</li>
               </ul>
               <a
+                class="visit__link"
                 href="http://dozoecom.herokuapp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 >See live</a
               >
               <a
+                class="visit__link"
                 href="https://github.com/idriss30/dozo-frontEnd"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -239,6 +251,7 @@
                 front end Code</a
               >
               <a
+                class="visit__link"
                 href="https://github.com/idriss30/dozo"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -249,16 +262,27 @@
           </div>
         </div>
       </div>
+      <div class="connect__display">
+        <p>Let's connect !</p>
+        <a href="/contact">Contact Me</a>
+      </div>
     </section>
-    <div class="connect__display">
-      <p>Let's connect !</p>
-      <a href="/contact.html">Contact Me</a>
-    </div>
+
     <div class="section__one-footer">
       <div class="section__one-footer-shape"></div>
       <div class="section__one-footer-links">
-        <a href="/">Linkedin</a>
-        <a href="/">Github</a>
+        <a
+          href="https://Linkedin.com/in/idriss-cissoko-7a6b9a213"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Linkedin</a
+        >
+        <a
+          href="https://github.com/idriss30"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Github</a
+        >
       </div>
     </div>
   </body>

@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 module.exports = {
   entry: {
     index: {
@@ -48,12 +48,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
-      title: "Idriss Portfolio",
+      title: "Idriss Cissoko",
       template: path.resolve(__dirname, "..", "./src/index.html"),
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      title: "About Idriss Cissoko",
+      title: "About Idriss",
       template: path.resolve(__dirname, "..", "./src/about.html"),
       filename: "about.html",
     }),
@@ -66,6 +66,9 @@ module.exports = {
       title: "contact Idriss",
       template: path.resolve(__dirname, "..", "./src/contact.html"),
       filename: "contact.html",
+    }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, "..", "./src/fav.png"),
     }),
   ],
   output: {
