@@ -27,8 +27,6 @@ if (popup) {
 if (formElement) {
   formElement.addEventListener("submit", (e) => {
     e.preventDefault();
-    formElement.reset();
-
     axios
       .post("https://idrisscissoko.com/api/message", {
         name: formElement.name.value,
@@ -36,6 +34,7 @@ if (formElement) {
         message: formElement.message.value,
       })
       .then((res) => {
+        formElement.reset();
         if (res.data.error) {
           popupText.innerText =
             "your message could not be sent. Please use hello@idrisscissoko.com";

@@ -1,8 +1,5 @@
 import "./index.scss";
 import baffle from "baffle";
-import "./about";
-import "./project";
-import "./contact";
 
 // // create the Dom elements Object
 var landingElements = {
